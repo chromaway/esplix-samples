@@ -31,9 +31,7 @@ You should see log messages corresponding to alice and bob contexts.
 While keeping server open, go to `sample-server-client/` directory and run:
 
  * `npm install` to install dependencies (jayson package)
- * `node script.js`
+ * `node alice-script.js`: this script connects as Alice and creates a new `futuristic` contract, thend invites Bob as a broker. Contract ID is written to a file.
+ * `node bob-script.js`: this script connects as Bob and reads fields from the contract, then checks applicable action and calls DESCRIBE action.
 
-Now you should see:
 
- * new contract being created
- * its fields 
