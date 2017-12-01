@@ -1,3 +1,7 @@
 {
-    "mode": "simulated"
+    "mode": "simulated",
+    "keypair": { 
+	"privKey": "a19df6a6a1408c643b77f2f56db397e71c2100f8db9068a77df124e0aa4cdb11",
+	"pubKey": "032a2b53cd473887e468f4c5cdb5e490e01e590694824678c4b091734184e82eb9" 
+    }
 }

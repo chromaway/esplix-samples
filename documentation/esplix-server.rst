@@ -1,14 +1,16 @@
 Esplix Server
 ====================
 
-Esplix Server acts as an agent for a particular user or a set of users, it will retrieve messages corresponding to contracts they are interested in, compute current state, manage encryption/decryption and signing to allow users to interact with contracts. 
+Esplix Server acts as an agent for a particular user or a set of users, it will retrieve messages corresponding to contracts they are interested in, compute current state, manage encryption/decryption and signing to allow users to interact with contracts.
+
+Esplix Server exposes its functionality via JSON-RPC API.
 
 Install & Lanuch
 ^^^^^^^^^^^^^^^^
 
-Working with Esplix Server is easy. Just download the SDK (``esplix-server-sdk.js``) and start the server using::
+Working with Esplix Server is easy. Just download the SDK (``esplix-server.js``) and start the server using::
 
-  node esplix-server-sdk.js
+  node esplix-server.js
 
 Make sure you have a data directory with sample contexts and contracts i.e::
 
@@ -17,10 +19,10 @@ Make sure you have a data directory with sample contexts and contracts i.e::
 
 You can then pass the data directory as an argument to the server::
 
-  node esplix-server-sdk.js --datadir=data_dir
+  node esplix-server.js --datadir=data_dir
 
 Configuration
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 Esplix server expects 2 arguments:
 
@@ -29,7 +31,7 @@ Esplix server expects 2 arguments:
 
 i.e::
 
-  node esplix-server-sdk.js --datadir=data --port=5535
+  node esplix-server.js --datadir=data --port=5535
 
 Besides that, the directory ``data/contexts`` can hold a context configuration file as follows::
 
@@ -48,7 +50,7 @@ Another option is to run the server in simulation mode with a context file as fo
 
 We've also included a random key-pair generator which could be called like this::
 
-  node esplix-server-sdk.js --keygen
+  node esplix-server.js --keygen
 
 Connecting to Esplix Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

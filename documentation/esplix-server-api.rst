@@ -1,10 +1,11 @@
 Esplix Server API
 ====================
 
-Esplix Server API methods are called through JSON-RPC.
-When using an external JSON RPC clients, the context of a contract is referenced using the URL of the server.
+Esplix Server API methods are called through JSON-RPC (specifically, JSON-RPC 2.0 over HTTP).
 
-Example: ``http://localhost:5535/alice/jsonrpc`` is the server's JSON-RPC URL while ``alice`` is the name of the context.
+A single server can work with multiple user contexts, each of which might have different set of contract instances and different
+blockchain connection. The context of a contract is referenced using the URL of the server.
+Example: ``http://localhost:5535/alice/jsonrpc`` is the server's JSON-RPC URL corresponding to context named  ``alice``.
 
 Functions
 -----------
@@ -15,7 +16,7 @@ Returns all instance IDs from a specific context.
 
 args: none.
 
-getFields()
+getFields(chainID)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Returns all fields from a contract.
 
@@ -23,7 +24,7 @@ args:
 
 * ``chainID``: contract instance ID
 
-getFieldInfo()
+getFieldInfo(chainID)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Returns information on the requested field of a contract.
 
@@ -31,7 +32,7 @@ args:
 
 * ``chainID``: contract instance ID
 
-getApplicableActions()
+getApplicableActions(chainID)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Returns all applicable actions from a contract.
 
@@ -39,7 +40,7 @@ args:
 
 * ``chainID``: contract instance ID
 
-getActionParams()
+getActionParams(chainID, actionName)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Returns all params of a specific action.
 
@@ -48,8 +49,8 @@ args:
 * ``chainID``: contract instance ID
 * ``actionName``: name of the requested action
 
-performAction()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+performAction(chainID, actionName, actionArgs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Performs an action in a contract.
 
 args:
@@ -58,7 +59,7 @@ args:
 * ``actionName``: name of the requested action
 * ``actionArgs``: arguments to be passed to the action
 
-createContractInstance()
+createContractInstance(contractHash, params)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Creates a new contract instance.
 
