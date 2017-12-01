@@ -13,9 +13,13 @@ In this sample bundle you can find:
  * server: example Esplix API Server configuration and launch scripts
  * sample-server-client: client code which connects to the API Server over JSON-RPC (JS)
 
-The API server and libs connect to postchain servers at esplix1.chromaway.net, but you can also run with a simulated back-end
+The API server and libs connect to postchain servers at esplix1.chromaway.net or to an in-memory simulated backend depending on command-line options.
 
 For more information, please refer to documentation.
+
+## node.js sample
+
+
 
 ## Client-server sample
 
