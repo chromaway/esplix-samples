@@ -1,0 +1,9 @@
+{
+    "mode": "postchain",
+    "keypair": {
+    	       "privKey": "41cc4abdfefbf865b843f489bd9581775ed6a942adf5647088a32805e15d6656",
+               "pubKey": "028854e1eb5d17c22c25712ca89b35b03223480971a88e7b573441cfa2b72f891d" 
+    },
+    "postchainURL": "http://main-message-store.esplix1.chromaway.net",
+    "messagingURL": "http://messaging.esplix1.chromaway.net"
+}
