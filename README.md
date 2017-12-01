@@ -9,8 +9,10 @@ Esplix applications can be implemented in several ways:
 In this sample bundle you can find:
 
  * sample-node:  example of using Esplix Node SDK 
- * server: example Esplix Server configuration and lunch scripts
- * sample-server-client: client code which connects to Server over JSON-RPC (JS)
+ * server: example Esplix API Server configuration and launch scripts
+ * sample-server-client: client code which connects to the API Server over JSON-RPC (JS)
+
+The API server connects to postchain servers at esplix1.chromaway.net
 
 For more information, please refer to documentation.
 
