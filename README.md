@@ -19,7 +19,15 @@ For more information, please refer to documentation.
 
 ## node.js sample
 
+In `sample-node` directory, run:
 
+ * `npm install` to install dependencies
+ * `node index.js` to run a simple script which creates a contract and performs few actions (using in-memory simulation)
+ * `node index.js postchain` to do same as above but connecting to a Postchain node
+
+Sample code relies on `esplix-node-sdk` package which resides in `sdk` directory.
+
+See `documentation/js-api.md` for Esplix JS API documentation.
 
 ## Client-server sample
 
@@ -41,4 +49,21 @@ While keeping the server connection running, go to `sample-server-client/` direc
  * `node alice-script.js`: this script connects as Alice and creates a new `futuristic` contract, thend invites Bob as a broker. Contract ID is written to a file.
  * `node bob-script.js`: this script connects as Bob and reads fields from the contract, then checks applicable action and calls DESCRIBE action.
 
+
+## Browser app sample
+
+`esplix-browser-sdk` can be used as an in-browser client which does local security checks and signing, as well as a mobile app using Cordova.
+
+To run sample, execute following commands in `esplix-browser-sample` directory:
+
+ * `npm install`
+ * `npm start`
+
+This will automatically open browser page with URL `http://localhost:3000/` which runs the sample. It will display public key of a
+randomly generated keypair. A button can be used to create a contract instance.
+
+By default Esplix context uses in-memory simulation mode. If page is opened as `http://localhost:3000/#postchain`, Esplix will connect
+to a Postchain node. (Page reload is required.)
+
+See `documentation/js-api.md` for Esplix JS API documentation.
 
