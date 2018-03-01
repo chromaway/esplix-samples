@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import * as esplix from 'esplix-browser-sdk';
+import * as esplix from 'esplix';
 
 let esplixConfig;
 if (window.location.hash === "#postchain") {
@@ -12,7 +12,7 @@ if (window.location.hash === "#postchain") {
     esplixConfig = esplix.dummyConfig();
 }
 
-const futuristicContract = Buffer.from(require('./contracts/futuristic.r2o.json'), 'hex');
+const futuristicContract = Buffer.from(require('./contracts/futuristic.ratc.r4o.json'), 'hex');
 
 class App extends Component {
   constructor(props) {
@@ -43,10 +43,11 @@ class App extends Component {
       if (!context.principalIdentity.isSetUp())
           await context.principalIdentity.generateIdentity();
 
+      /*
       const oilCD = await context.contractDefinitionManager.registerDefinitionFromURL(
           "http://ratc.esplix3.chromaway.net/get-compiled?name=oilload"
       );
-      console.log(oilCD);
+      console.log(oilCD);*/
       const futuristicCD = context.contractDefinitionManager.registerDefinition(futuristicContract);
 
       setInterval(() => {
