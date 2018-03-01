@@ -4,9 +4,9 @@ import * as esplix from 'esplix';
 
 let esplixConfig;
 if (window.location.hash === "#postchain") {
-    esplixConfig = esplix.postchainConfig(
-        "http://main-message-store.esplix1.chromaway.net",
-        "http://messaging.esplix1.chromaway.net"
+    esplixConfig = esplix.postchainConfig("http://35.205.207.236:5001",
+        "http://messaging.esplix1.chromaway.net",
+        Buffer.from("ae56ed7dc4fb49e6162c7d9ecbb13684928b81f0464d675b23547963700874c7", 'hex')
     );
 } else {
     esplixConfig = esplix.dummyConfig();

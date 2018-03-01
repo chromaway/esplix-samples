@@ -5,7 +5,7 @@ These samples allow you to test out the Esplix API server, useful for RPC calls,
 Esplix applications can be implemented in two ways:
 
  * using Esplix JavaScript library (for node.js and browser)
- * using Esplix Server and JSON-RPC API
+ * using Esplix Server and JSON-RPC API (currently disabled!)
 
 In this sample bundle you can find:
 
@@ -25,11 +25,11 @@ In `sample-node` directory, run:
  * `node index.js` to run a simple script which creates a contract and performs few actions (using in-memory simulation)
  * `node index.js postchain` to do same as above but connecting to a Postchain node
 
-Sample code relies on `esplix-node-sdk` package which resides in `sdk` directory.
-
 See `documentation/js-api.md` for Esplix JS API documentation.
 
 ## Client-server sample
+
+Note: currently doesn't work!
 
 Two server configurations are provided: 
 
