@@ -43,11 +43,10 @@ class App extends Component {
       if (!context.principalIdentity.isSetUp())
           await context.principalIdentity.generateIdentity();
 
-      /*
-      const oilCD = await context.contractDefinitionManager.registerDefinitionFromURL(
-          "http://ratc.esplix3.chromaway.net/get-compiled?name=oilload"
+      const demoCD = await context.contractDefinitionManager.registerDefinitionFromURL(
+          "http://ratc.esplix-r4-1.chromaway.net/get-compiled?name=r4demo1"
       );
-      console.log(oilCD);*/
+      console.log(demoCD);
       const futuristicCD = context.contractDefinitionManager.registerDefinition(futuristicContract);
 
       setInterval(() => {
